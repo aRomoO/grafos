@@ -11,9 +11,10 @@ private:
     std::vector<std::vector<int>> matriz;
 
 public:
-    MyGraph(std::vector<std::vector<int>>& matriz);
-    void loadGraph(std::vector<std::vector<int>>& matriz);
+    MyGraph(std::vector<std::vector<int>>& matriz); //O(1)
+    void loadGraph(std::vector<std::vector<int>>& matriz); //O(1)
     void DFS(int nodo);
+    void DFS(int nodo, std::vector<bool>& visited); //Helper function para DFS recursivo
     void BFS(int nodo);
 };
 
