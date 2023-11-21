@@ -84,6 +84,7 @@ void MyGraph::BFS(int nodo)
 
 
 // Función para verificar si el grafo es un árbol
+
 bool MyGraph::isTree() {
     //Para ser un árbol:
     // No debe de tener ciclos
@@ -128,6 +129,7 @@ bool MyGraph::isTree() {
     // Cumple con las propiedades de un árbol
     return visited_nodes == numOfnodes;
 }
+
 
 
 //topological sort

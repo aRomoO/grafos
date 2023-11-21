@@ -4,11 +4,11 @@
 int main() {
     // Crear una matriz de adyacencia para probar la clase MyGraph
     std::vector<std::vector<int>> matriz = {
-            {0, 1, 0, 0, 1, 0},
-            {1, 0, 1, 0, 1, 0},
+            {0, 1, 0, 0, 0, 0},
+            {1, 0, 1, 0, 0, 0},
             {0, 1, 0, 1, 0, 0},
-            {0, 0, 1, 0, 0, 0},
-            {1, 1, 0, 0, 0, 1},
+            {0, 0, 1, 0, 1, 0},
+            {0, 0, 0, 1, 0, 1},
             {0, 0, 0, 0, 1, 0}
     };
 

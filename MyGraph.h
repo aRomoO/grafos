@@ -7,7 +7,7 @@
 #include "vector"
 
 class MyGraph {
-private:
+public:
     std::vector<std::vector<int>> matriz;
 
 public:
@@ -18,9 +18,9 @@ public:
                                                     // Helper function para DFS recursivo
     void BFS(int nodo); //O(n)  | O(V+E) V: Vertices , E: Nodos
 
-    bool isTree();
-    void topologicalSort();
-    bool bipartiteGraph();
+    bool isTree(); //O(n)  | O(V+E) V: Vertices , E: Nodos
+    void topologicalSort(); //O(n)  | O(V+E) V: Vertices , E: Nodos
+    bool bipartiteGraph(); //O(n)  | O(V+E) V: Vertices , E: Nodos
 
 };
 
