@@ -16,7 +16,7 @@ public:
     void DFS(int nodo);
     void DFS(int nodo, std::vector<bool>& visited); //O(n) | O(V+E) V: Vertices , E: Nodos
                                                     // Helper function para DFS recursivo
-    void BFS(int nodo); //O(n) | O(V+E) V: Vertices , E: Nodos
+    void BFS(int nodo); //O(n)  | O(V+E) V: Vertices , E: Nodos
 
     bool isTree();
     void topologicalSort();
