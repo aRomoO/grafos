@@ -1,28 +1,40 @@
-#include <iostream>
 #include "MyGraph.h"
+#include <iostream>
 
-int main()
-{
-    // Define an adjacency matrix for a directed graph
-    std::vector<std::vector<int>> adjacencyMatrix = {
-            {0, 1, 0, 1, 0},
-            {0, 0, 1, 0, 0},
-            {0, 0, 0, 1, 1},
-            {0, 0, 0, 0, 1},
-            {0, 0, 0, 0, 1}
+int main() {
+    // Crear una matriz de adyacencia para probar la clase MyGraph
+    std::vector<std::vector<int>> matriz = {
+            {0, 1, 0, 0, 1, 0},
+            {1, 0, 1, 0, 1, 0},
+            {0, 1, 0, 1, 0, 0},
+            {0, 0, 1, 0, 0, 0},
+            {1, 1, 0, 0, 0, 1},
+            {0, 0, 0, 0, 1, 0}
     };
 
-    // Create a MyGraph object with the given adjacency matrix
-    MyGraph myGraph(adjacencyMatrix);
 
-    std::cout << "Depth-First Search (DFS) starting from node 2:" << std::endl;
-    myGraph.DFS(2);
-    std::cout << std::endl;
+    try {
+        // Crear una instancia de MyGraph
+        MyGraph grafo(matriz);
 
-    std::cout << "Breadth-First Search (BFS) starting from node 2:" << std::endl;
-    myGraph.BFS(2);
-    std::cout << std::endl;
+        // Probar funciones de la clase
+        std::cout << "DFS traversal starting from node 0: ";
+        grafo.DFS(0);
+        std::cout << std::endl;
 
+        std::cout << "BFS traversal starting from node 0: ";
+        grafo.BFS(0);
+        std::cout << std::endl;
+
+        std::cout << "Is the graph a tree? " << (grafo.isTree() ? "Yes" : "No") << std::endl;
+
+        std::cout << "Topological sort: ";
+        grafo.topologicalSort();
+
+        std::cout << "Is the graph bipartite? " << (grafo.bipartiteGraph() ? "Yes" : "No") << std::endl;
+    } catch (const std::invalid_argument& e) {
+        std::cerr << "Error: " << e.what() << std::endl;
+    }
 
     return 0;
 }
